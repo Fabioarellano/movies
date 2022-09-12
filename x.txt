@@ -1,0 +1,13 @@
+<p class="parrafo">
+
+p {
+    color: blue;
+}
+
+p.parrafo {
+    color: red;
+}
+
+.parrafo {
+    color: purple;
+}
