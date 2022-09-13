@@ -19,6 +19,7 @@ export function App(){
             </header>
             <main>
               {/* <MoviesGrid/> */}
+                {/* // rutas de acceso a las paginas */}
                 <Routes>
                     {/* <Route path="/movie">Movie</Route> */}
                     <Route path="/" element={<LandingPage/>} />

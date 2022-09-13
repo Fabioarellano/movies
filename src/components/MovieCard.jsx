@@ -6,6 +6,7 @@ export function MovieCard({ movie }){
     const imageUrl = "https://image.tmdb.org/t/p/w300" + movie.poster_path;
     return (
         <li  className={ styles.movieCard }>
+            {/* enlazar la descripcion de las peliculas, por medio de du id */}
             <Link to={"/movies/" + movie.id}> 
                 <img 
                     width={230} 
