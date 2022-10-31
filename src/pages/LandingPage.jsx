@@ -1,11 +1,17 @@
 import { MoviesGrid } from "../components/MoviesGrid";
 import { Search } from "../components/Search";
+import { useDebounce } from "../hooks/useDebounce";
+import { useQuery } from "../hooks/useQuery";
 
 export function LandingPage() {
-    return (
+  const query =  useQuery();
+  const search = query.get("search");
+
+  const debouncedSearch = useDebounce(search, 300);
+  return (
         <div>
           <Search />
-          <MoviesGrid />
+          <MoviesGrid key={debouncedSearch} search={debouncedSearch}/> { /* al cambiar busqueda, destruye el moviesGrid.Reset los seState de MoviesGrid */}
         </div>
       );
 }
